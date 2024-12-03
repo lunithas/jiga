@@ -1,0 +1,117 @@
+/* Fondo y tipografía general */
+body {
+    margin-top: 20%;
+    background: linear-gradient(to bottom, #e3f2fd, #ffffff);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Título central */
+h2 {
+    margin-top: 250%;
+    margin-bottom: -50%;
+    text-align: center;
+    color: #007bff;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #6c757d;
+    font-size: 2rem;
+}
+
+/* Sección de la información (contenedor con imagen y texto) */
+.info-section {
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Esto permite que los elementos se acomoden en pantallas pequeñas */
+}
+
+/* Estilo para la imagen */
+.info-section img {
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el texto */
+.info-section p {
+    flex: 1;
+    text-align: justify;
+}
+
+/* Estilo para los botones */
+.action-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilo de los botones */
+.btn {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    min-width: 150px; /* Asegura que los botones tengan un tamaño mínimo */
+}
+
+/* Efecto al pasar el mouse */
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+}
+
+/* Media Queries para pantallas pequeñas (móviles y tablets) */
+@media (max-width: 768px) {
+    .info-section {
+       
+        flex-direction: column; /* En pantallas pequeñas, los elementos estarán apilados */
+        gap: 15px; /* Reducir el espacio entre los elementos */
+    }
+
+    .info-section img {
+        max-width: 100%; /* La imagen ocupará todo el ancho disponible */
+    }
+
+    .info-section p {
+        font-size: 1rem; /* Ajustar tamaño de fuente */
+    }
+
+    h2 {
+        margin-top: 120%;
+        font-size: 1.5rem; /* Reducir el tamaño del título */
+    }
+
+    .btn {
+        min-width: 120px; /* Asegurarse de que los botones no sean demasiado grandes en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        margin-top: 120%;
+        font-size: 1.25rem; /* Reducir aún más el tamaño del título en pantallas muy pequeñas */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Ajustar tamaño de la fuente de los botones en pantallas pequeñas */
+    }
+}
