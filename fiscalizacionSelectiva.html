@@ -432,13 +432,13 @@ body {
      <div class="row mt-4">
          <!-- Sección con imagen y texto -->
          <div class="col-12 d-flex justify-content-center align-items-center flex-column">
-             <img src="imagen/imagen2.jpg"  alt="Imagen Circular" style="height: 70%;width: 50%; margin-top: -15%; border-radius: 50%;">
+             <img src="imagen/imagen2.jpg"  alt="Imagen Circular" style="height: 70%;width: 50%; margin-top: 10%; border-radius: 50%;">
              <div class="mt-2" style="background-color: #3d72e4; color: white; border-radius: 15%; padding: 5px;">DE OFICIO</div>
          </div>
      </div>
 
      <!-- Descripción del Proceso -->
-     <div class="content-text" style="margin-top: -5%;">
+     <div class="content-text" style="margin-top: 5%;">
          <p>Si, fue notificado por impuestos nacionales para realizar la respectiva fiscalización se te controlará los siguientes diferentes puntos.</p>
      </div>
 
@@ -456,10 +456,10 @@ body {
              <a href="fiscalizacionTotal.html"><button class="button-custom button-fiscalizacion-total" onclick="highlightButton(this)" data-bs-toggle="modal" data-bs-target="#fiscalizacionTotalModal">FISCALIZACION TOTAL</button></a>
          </div>
          <div class="col-12 col-md-6 text-center mb-3">
-             <button class="button-custom button-fiscalizacion-parcial" onclick="highlightButton(this)" data-bs-toggle="modal" data-bs-target="#fiscalizacionParcialModal">FISCALIZACION PARCIAL</button>
+             <a href="fiscalizacionParcial.html"><button class="button-custom button-fiscalizacion-parcial" onclick="highlightButton(this)" data-bs-toggle="modal" data-bs-target="#fiscalizacionParcialModal">FISCALIZACION PARCIAL</button></a>
          </div>
          <div class="col-12 col-md-6 text-center mb-3">
-             <button class="button-custom button-verificacion-interna" onclick="highlightButton(this)" data-bs-toggle="modal" data-bs-target="#verificacionInternaModal">VERIFICACION INTERNA</button>
+             <a href="verificacioninterna.html"><button class="button-custom button-verificacion-interna" onclick="highlightButton(this)" data-bs-toggle="modal" data-bs-target="#verificacionInternaModal">VERIFICACION INTERNA</button></a>
          </div>
      </div>
  </div>
@@ -484,7 +484,7 @@ body {
          button.classList.add('highlight');
      }
  </script>
- 
+  <p style="visibility: hidden;">Este párrafo es invisible pero ocupa espacio en el diseño.</p>
 </body>
 
 </html>
