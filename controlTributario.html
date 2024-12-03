@@ -257,7 +257,7 @@
         /* empecemos */
 
 
-       /* Estilos generales */
+/* Estilos generales */
 body {
     background-color: #ccddf6;
     font-family: 'Open Sans', sans-serif;
@@ -265,24 +265,13 @@ body {
     padding: 0;
 }
 
-/* Contenedor */
+/* Contenedor principal */
 .container {
     padding: 10px;
     display: flex;
-    margin-top: 10%;
     flex-direction: column;
     align-items: center;
     animation: fadeInContainer 1s ease-out forwards;
-}
-
-/* Animación de FadeIn para el contenedor */
-@keyframes fadeInContainer {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 /* Botón de retroceso */
@@ -309,7 +298,8 @@ body {
 /* Sección de imagen */
 .image-section {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 5px;
     padding: 10px;
     transition: transform 0.5s ease;
@@ -346,18 +336,13 @@ body {
     font-weight: bold;
     margin-top: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Contenedor de texto */
-.content-section {
-    width: 100%;
     text-align: center;
-    margin-top: 20px;
 }
 
 /* Caja de texto */
 .text-box {
-    width: 205px;
+    width: 90%;
+    max-width: 400px;
     margin: 10px;
     text-align: justify;
     line-height: 1.6;
@@ -384,27 +369,18 @@ body {
     animation: fadeInText 1.5s ease-in-out forwards;
 }
 
-/* Animación de FadeIn para el texto destacado */
-@keyframes fadeInText {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 /* Botón de multas */
 .btn-multas {
     background-color: #395ab0;
     color: white;
-    padding: 15px 50px;
+    padding: 10px 20px;
     margin-top: 30px;
     margin-bottom: 20px;
     border-radius: 25px;
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 16px;
 }
 
 .btn-multas:hover {
@@ -414,9 +390,9 @@ body {
 
 /* Botón de Scroll to Top */
 .scroll-to-top {
+    margin-bottom: 10%;
     position: fixed;
     bottom: 30px;
-    margin-bottom: 30px;
     right: 30px;
     background-color: #565fa4;
     color: white;
@@ -428,17 +404,16 @@ body {
 }
 
 .scroll-to-top:hover {
+   
     background-color: #3c4b7e;
     transform: scale(1.2);
 }
 
 /* Imagen informativa */
 .info-image {
-    width: 100%;
-    height: 60%;
+    width: 90%;
+    max-width: 400px;
     margin-top: 20px;
-    padding-left: 10%;
-    padding-right: 10%;
     object-fit: cover;
     border-radius: 15px;
     transition: transform 0.3s ease;
@@ -447,14 +422,54 @@ body {
 .info-image:hover {
     transform: scale(1.05);
 }
-.textOS{
-    width: 30%;
-    height: 30%;
-    margin-top: 20px;
-    object-fit: cover;
-    border-radius: 15px;
-    transition: transform 0.3s ease;
+
+/* Responsividad con Media Queries */
+@media (max-width: 768px) {
+    .text-box {
+        font-size: 14px;
+    }
+
+    .btn-multas {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+
+    .info-image {
+        width: 100%;
+    }
+
+    .image-container img {
+        width: 60px;
+        height: 60px;
+    }
 }
+
+@media (max-width: 480px) {
+    .text-box {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .highlight-text {
+        font-size: 14px;
+    }
+
+    .btn-multas {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+
+    .info-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .image-container img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
     </style>
 </head>
 
@@ -507,18 +522,18 @@ body {
         <button class="back-button">
            <a href="denuncia.html"> <img src="imagen/atrass.png" alt="Atras"></a>
         </button>
-        <p class="highlight-text">
+        <h1 class="text-box" style="margin-top: 30%; text-justify: auto;">
             CONTROL TRIBUTARIO
-        </p>
+        </h1>
         <!-- Image and Text Section -->
       
         <div class="image-section">
             <div class="image-container">
-                <img class="img-fluid fadeInUp" style="display: block; margin: 0 auto; width: 100%; max-width: 90%; height: auto;" src="imagen/imagen1.jpg" alt="Persona 2">
+                <img class="img-fluid fadeInUp" style="display: block; margin: 0 auto; width: 100%; max-width: 70%; height: auto; " src="imagen/imagen1.jpg" alt="Persona 2">
                 <p class="denuncia-text">DENUNCIA</p>
             </div>
 
-            <div class="content-section">
+            <div class="content-section" style="max-width: 100%; margin-right: 10%;">
                 <p class="text-box">
                     En este control tributario, el SIN de oficio podrá verificar el correcto cumplimiento de la
                     obligación de emisión de factura, nota fiscal o documento equivalente mediante operativos de
@@ -529,7 +544,7 @@ body {
         
 
         <!-- Highlighted Text -->
-        <p class="highlight-text">
+        <p class="text-box">
             Una vez comprobando, que el contribuyente no ha emitido y que ha incumplido la emisión de la factura, el SIN
             procede con la emisión de un acta de fiscalización, donde se detallan todo lo observado, se apertura un
             proceso sancionador notificando este acto administrativo al contribuyente.
@@ -542,7 +557,7 @@ body {
         <button class="scroll-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</button>
 
         <!-- Sanciones Text -->
-        <p class="highlight-text">
+        <p class="text-box">
             Se aplican sanciones progresivas en función del grado de reincidencia del contribuyente.
         </p>
 
