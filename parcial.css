@@ -1,0 +1,78 @@
+body {
+    background: linear-gradient(to bottom, #e3f2fd, #f8f9fa);
+    font-family: 'Arial', sans-serif;
+    color: #343a40;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 20%;
+    text-align: center;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px #6c757d;
+}
+
+.step {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.step .icon {
+    font-size: 40px;
+    color: #007bff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.step h5 {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.step p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.step img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.step img:hover {
+    transform: scale(1.05);
+}
+
+.step:hover .icon {
+    color: #0056b3;
+}
+
+/* Animación de entrada */
+.animated {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+}
+
+.animated.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
