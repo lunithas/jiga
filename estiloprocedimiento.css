@@ -1,0 +1,186 @@
+/* Fondo azul para todo el cuerpo */
+body {
+    background-color: #7ca8d3; /* Azul claro */
+    font-family: Arial, sans-serif;
+    margin-top: 25%;
+    margin: 0; /* Eliminar margenes predeterminados */
+    padding: 0;
+}
+
+/* Estilos para la cabecera */
+h2 {
+    margin-top: 10%;
+    text-align: center;
+    max-width: 300px;
+    font-size: 2.5rem;
+    color: #ffffff; /* Blanco para texto */
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave y sutil */
+}
+
+/* Asegurar que la imagen sea centrada y tenga bordes redondeados */
+.info-image {
+  
+    max-width: 300px;
+
+    width: 80%;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor central para el contenido */
+.container {
+    margin-top: 50px;
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Estilos de las tarjetas */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Títulos de las tarjetas */
+.card-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Texto de las tarjetas */
+.card-text {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Botón personalizado */
+.btn-custom {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #7ca8d3;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    h2 {
+        margin-top: 25%;
+        max-width: 300px;
+        margin-right:15% ;
+        align-items: center;
+        font-size: 2rem; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    }
+
+    .container {
+        margin-right:15% ;
+        padding: 10px; /* Espaciado reducido */
+        
+    }
+
+    .card {
+        padding: 15px; /* Menos padding en tarjetas en pantallas pequeñas */
+    }
+
+    .info-image {
+        width: 90%; /* Asegura que la imagen ocupe un mayor ancho en pantallas pequeñas */
+        max-width: 300px;
+        margin-right:15% ;
+    }
+
+    .btn-custom {
+        font-size: 0.9rem; /* Fuente más pequeña en botones para móviles */
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.8rem; /* Ajuste adicional para pantallas más pequeñas */
+    }
+
+    .btn-custom {
+        width: 100%; /* El botón ocupará el 100% de la pantalla */
+    }
+}
+
+/* Alineación en fila con espaciado adecuado */
+.item-container {
+    display: flex;
+    max-width: 200px;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para animación */
+}
+
+/* Animación cuando el usuario pasa el mouse sobre los elementos */
+.item-container:hover {
+    transform: translateY(-10px); /* Eleva el elemento ligeramente */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+}
+
+/* Imagen responsiva */
+img.img-fluid {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el texto */
+p {
+    font-size: 1rem;
+    color: #3f6db2;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+/* Añadir efectos de transición */
+.item-container img, .item-container p {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Animación de fade-in cuando la página carga */
+.item-container {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Estilo para la imagen */
+#right-image {
+    max-width: 100%;  /* Asegura que la imagen no se desborde */
+    max-width: 100px; /* Mantiene la relación de aspecto */
+    margin-top: 20px; /* Espacio en la parte superior */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Ajuste de la columna para pantallas pequeñas */
+@media (max-width: 768px) {
+    .text-end {
+        text-align: right; /* Alinea a la derecha en dispositivos pequeños */
+        margin-right: 15%;
+        max-width: 300px;
+    }
+}
+

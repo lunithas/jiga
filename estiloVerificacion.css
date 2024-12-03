@@ -1,0 +1,757 @@
+/* Estilo para el texto en el rectángulo verde */
+.verificacion-externa {
+    background-color: #9eccf1;
+    color: rgb(43, 126, 122);
+    font-weight: bold;
+    margin-top: 30%; 
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2rem;
+}
+
+    .imagen {
+        width: 100%; /* Imagen ocupando todo el ancho */
+        height: auto;
+    }
+
+    .texto {
+        font-size: 0.9rem; /* Texto más pequeño */
+        top: 15%; /* Ajusta la posición para pantallas muy pequeñas */
+        left: 5%; /* Mantiene el margen */
+        width: 90%; /* Ocupa el 90% del ancho */
+    }
+/* Estilos generales */
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Estilo para el contenedor de texto y imagen */
+.contenido {
+    width: 100%;
+    max-width: 300px; /* Limita el ancho máximo */
+    margin-top: 30px; /* Espacio superior */
+    text-align: center;
+    font-size: 1.2rem; /* Tamaño de fuente */
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f4f4f4; /* Fondo suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    animation: entradaTexto 1s ease-out; /* Animación de entrada para el texto */
+    opacity: 1; /* Asegura que el texto se quede visible */
+    position: relative; /* Establece el contenedor como contenedor relativo */
+}
+
+/* Animación de entrada para el texto */
+@keyframes entradaTexto {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Empuja el texto hacia abajo */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* El texto se queda en su posición original */
+    }
+}
+
+/* Estilos para la imagen de error */
+.error-imagen {
+    position: absolute; /* Cambia a posición absoluta */
+    bottom: 10px; /* Coloca la imagen a 10px del fondo */
+    right: 10px; /* Coloca la imagen a 10px de la derecha */
+    width: 50px; /* Tamaño de la imagen */
+    height: 50px; /* Tamaño de la imagen */
+    animation: palpitacion 1s ease-in-out infinite; /* Animación de palpitación */
+    cursor: pointer; /* Añade el cursor como puntero */
+}
+
+/* Animación de palpitación para la imagen */
+@keyframes palpitacion {
+    0% {
+        transform: scale(1); /* Tamaño original */
+    }
+    50% {
+        transform: scale(1.2); /* Aumenta el tamaño */
+    }
+    100% {
+        transform: scale(1); /* Vuelve al tamaño original */
+    }
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .contenido {
+        font-size: 1rem; /* Ajusta el tamaño del texto */
+        margin-top: 20px;
+    }
+
+    .error-imagen {
+        width: 40px; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+        height: 40px;
+    }
+}
+/* ------------ */
+/* Animación de entrada para la imagen */
+@keyframes entradaImagen {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(20px); /* Empuja la imagen desde abajo y pequeño */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0); /* La imagen se queda en su tamaño original y en su posición */
+    }
+}
+
+/* Aplicando la animación a la imagen */
+.imagen-entrada {
+    animation: entradaImagen 1.5s ease-out; /* Duración de 1.5 segundos y easing para un movimiento suave */
+    width: 100px; /* Tamaño inicial pequeño */
+    height: auto;
+}
+/* --------------- */
+/* Estilo para el número 1 con fondo redondo y color lila */
+.numero {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: #D3A7E8; /* Lila suave */
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 50%;
+    line-height: 60px; /* Centra el texto dentro del círculo */
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: all 0.3s ease; /* Transición más suave para la animación */
+    margin: 0 auto;
+}
+
+/* Efecto de pulsación cuando se presiona el número */
+.numero:active {
+    transform: scale(0.95); /* Efecto de pulsación */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra más fuerte al presionar */
+}
+
+/* Estilo para las instrucciones visuales */
+.instrucciones {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4a4a4a;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+/* Estilo para el contenido que aparece después de hacer clic */
+.contenido {
+    margin-top: 20px;
+    animation: mostrarContenido 0.8s ease-out;
+    padding: 20px;
+    background: linear-gradient(135deg, #D3A7E8, #E1C1F4); /* Fondo con degradado lila */
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de elevación al pasar el ratón por encima */
+.contenido:hover {
+    transform: translateY(-10px); /* Hace que el contenido se "eleve" un poco */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+}
+
+/* Añadir un borde sutil con degradado */
+.contenido::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: linear-gradient(135deg, #D3A7E8, #E1C1F4); /* Borde con el mismo degradado */
+    border-radius: 15px;
+    z-index: -1; /* Coloca el borde detrás del contenido */
+}
+
+/* Animación para mostrar el contenido */
+@keyframes mostrarContenido {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para los párrafos dentro del contenido */
+.contenido p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* Estilo para el botón dentro del contenido */
+.contenido button {
+    padding: 10px 20px;
+    background-color: #9B61D7; /* Color vibrante para el botón */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto de hover en el botón */
+.contenido button:hover {
+    background-color: #7A46B8; /* Cambio a un color más oscuro al pasar el ratón */
+    transform: scale(1.1); /* Hace que el botón se agrande un poco */
+}
+
+
+/* Animación para mostrar el contenido */
+@keyframes mostrarContenido {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* mmmmmmmmmmmmmmmmmmmmmmmm */
+/* Estilo para el número 2 con fondo redondo y color verde claro */
+.numero2 {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: #A1E6A1; /* Verde menta */
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 50%;
+    border-radius: 50%;
+    line-height: 60px; /* Centra el texto dentro del círculo */
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: all 0.3s ease; /* Transición más suave para la animación */
+    margin: 0 auto;
+}
+
+/* Efecto de pulsación cuando se presiona el número */
+.numero2:active {
+    transform: scale(0.95); /* Efecto de pulsación */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra más fuerte al presionar */
+}
+
+/* Estilo para las instrucciones visuales */
+.instrucciones2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4a4a4a;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+/* Estilo para el contenido que aparece después de hacer clic */
+.contenido2 {
+    margin-top: 20px;
+    max-width: 300px;
+    animation: mostrarContenido2 0.8s ease-out;
+    padding: 20px;
+    background: linear-gradient(135deg, #A1E6A1, #C0F5C0); /* Fondo con degradado verde menta */
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de elevación al pasar el ratón por encima */
+.contenido2:hover {
+    transform: translateY(-10px); /* Hace que el contenido se "eleve" un poco */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+}
+
+/* Añadir un borde sutil con degradado */
+.contenido2::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: linear-gradient(135deg, #A1E6A1, #C0F5C0); /* Borde con el mismo degradado */
+    border-radius: 15px;
+    z-index: -1; /* Coloca el borde detrás del contenido */
+}
+
+/* Animación para mostrar el contenido */
+@keyframes mostrarContenido2 {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para los párrafos dentro del contenido */
+.contenido2 p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* Estilo para el botón dentro del contenido */
+.contenido2 button {
+    padding: 10px 20px;
+    background-color: #58D68D; /* Color vibrante para el botón */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto de hover en el botón */
+.contenido2 button:hover {
+    background-color: #45A06D; /* Cambio a un color más oscuro al pasar el ratón */
+    transform: scale(1.1); /* Hace que el botón se agrande un poco */
+}
+
+/* oppppppppppppppppp */
+.numero3 {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: #f1ef4f; /* Verde menta */
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 50%;
+    border-radius: 50%;
+    line-height: 60px; /* Centra el texto dentro del círculo */
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: all 0.3s ease; /* Transición más suave para la animación */
+    margin: 0 auto;
+}
+
+
+/* Efecto de pulsación cuando se presiona el número */
+.numero3:active {
+    transform: scale(0.95); /* Efecto de pulsación */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra más fuerte al presionar */
+}
+
+/* Estilo para las instrucciones visuales */
+.instrucciones3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4a4a4a;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+/* Estilo para el contenido que aparece después de hacer clic */
+.contenido3 {
+    max-width: 300px;
+    margin-top: 20px;
+    animation: mostrarContenido3 0.8s ease-out;
+    padding: 20px;
+    background: linear-gradient(135deg, #FFD700, #FFEC8B); /* Fondo con degradado amarillo */
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de elevación al pasar el ratón por encima */
+.contenido3:hover {
+    transform: translateY(-10px); /* Hace que el contenido se "eleve" un poco */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+}
+
+/* Añadir un borde sutil con degradado */
+.contenido3::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: linear-gradient(135deg, #FFD700, #FFEC8B); /* Borde con el mismo degradado */
+    border-radius: 15px;
+    z-index: -1; /* Coloca el borde detrás del contenido */
+}
+
+/* Animación para mostrar el contenido */
+@keyframes mostrarContenido3 {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para los párrafos dentro del contenido */
+.contenido3 p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* Estilo para el botón dentro del contenido */
+.contenido3 button {
+    padding: 10px 20px;
+    background-color: #F4D03F; /* Color vibrante para el botón */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto de hover en el botón */
+.contenido3 button:hover {
+    background-color: #D4AC0D; /* Cambio a un color más oscuro al pasar el ratón */
+    transform: scale(1.1); /* Hace que el botón se agrande un poco */
+}
+/* lllllllllllllllllllllllllllllllllllll */
+
+.numero4 {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: #e02f2f; /* Verde menta */
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 50%;
+    border-radius: 50%;
+    line-height: 60px; /* Centra el texto dentro del círculo */
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: all 0.3s ease; /* Transición más suave para la animación */
+    margin: 0 auto;
+}
+
+
+/* Efecto de pulsación cuando se presiona el número */
+.numero4:active {
+    transform: scale(0.95); /* Efecto de pulsación */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra más fuerte al presionar */
+}
+
+/* Estilo para las instrucciones visuales */
+.instrucciones4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4a4a4a;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+/* Estilo para el contenido que aparece después de hacer clic */
+.contenido4 {
+    margin-top: 20px;
+    max-width: 300px;
+    animation: mostrarContenido3 0.8s ease-out;
+    padding: 20px;
+    background: linear-gradient(135deg, #c7291d, #e07c74); /* Fondo con degradado amarillo */
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de elevación al pasar el ratón por encima */
+.contenido4:hover {
+    transform: translateY(-10px); /* Hace que el contenido se "eleve" un poco */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+}
+
+/* Añadir un borde sutil con degradado */
+.contenido4::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: linear-gradient(135deg, #ff837a, #c7291d); /* Borde con el mismo degradado */
+    border-radius: 15px;
+    z-index: -1; /* Coloca el borde detrás del contenido */
+}
+
+/* Animación para mostrar el contenido */
+@keyframes mostrarContenido3 {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para los párrafos dentro del contenido */
+.contenido4 p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* Estilo para el botón dentro del contenido */
+.contenido4 button {
+    padding: 10px 20px;
+    background-color: #c7291d; /* Color vibrante para el botón */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto de hover en el botón */
+.contenido4 button:hover {
+    background-color: #c7291d; /* Cambio a un color más oscuro al pasar el ratón */
+    transform: scale(1.1); /* Hace que el botón se agrande un poco */
+}
+/* mmmmmmmmmmmmmmmmmmmmmmm */
+.numero5 {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: #0c2d74; /* Verde menta */
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 50%;
+    border-radius: 50%;
+    line-height: 60px; /* Centra el texto dentro del círculo */
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: all 0.3s ease; /* Transición más suave para la animación */
+    margin: 0 auto;
+}
+
+
+/* Efecto de pulsación cuando se presiona el número */
+.numero5:active {
+    transform: scale(0.95); /* Efecto de pulsación */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra más fuerte al presionar */
+}
+
+/* Estilo para las instrucciones visuales */
+.instrucciones5 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4a4a4a;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+/* Estilo para el contenido que aparece después de hacer clic */
+.contenido5 {
+    margin-top: 20px;
+    max-width: 300px;
+    animation: mostrarContenido3 0.8s ease-out;
+    padding: 20px;
+    background: linear-gradient(135deg, #4f75dd, #527ddb); /* Fondo con degradado amarillo */
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de elevación al pasar el ratón por encima */
+.contenido5:hover {
+    transform: translateY(-10px); /* Hace que el contenido se "eleve" un poco */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+}
+
+/* Añadir un borde sutil con degradado */
+.contenido5::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: linear-gradient(135deg, #5d8cf11c, #566ed8); /* Borde con el mismo degradado */
+    border-radius: 15px;
+    z-index: -1; /* Coloca el borde detrás del contenido */
+}
+
+/* Animación para mostrar el contenido */
+@keyframes mostrarContenido3 {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para los párrafos dentro del contenido */
+.contenido5 p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* Estilo para el botón dentro del contenido */
+.contenido5 button {
+    padding: 10px 20px;
+    background-color: #513ff4; /* Color vibrante para el botón */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto de hover en el botón */
+.contenido5 button:hover {
+    background-color: #D4AC0D; /* Cambio a un color más oscuro al pasar el ratón */
+    transform: scale(1.1); /* Hace que el botón se agrande un poco */
+}
+.content-container {
+    margin-top: 5%;
+    margin-left: 5%;
+    text-align: center;
+}
+
+.content-container img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.content-container p {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 10px;
+}
+
+.content-container h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Animación para la transición de entrada */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* Contenedor central para alinear el botón */
+.containerDID {
+    text-align: center;
+}
+
+/* Estilo del botón */
+.boton {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 50px;
+    background-color: #5A9BFF;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    outline: none;
+}
+
+/* Efecto al pasar el mouse (hover) */
+.boton:hover {
+    background-color: #3e7adf;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);  /* Movimiento de elevación */
+}
+
+/* Efecto de enfoque (focus) */
+.boton:focus {
+    outline: none;
+    border: 2px solid #4d90fe;
+    box-shadow: 0 0 5px rgba(0, 128, 255, 0.8);
+}
+
+/* Animación de "click" */
+.boton:active {
+    transform: translateY(2px); /* Efecto de depresión */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+

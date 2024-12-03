@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A oficio</title>
+    <!-- Incluimos Bootstrap para mejorar el diseño -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="beneficoss.css">
+    <!-- Para los iconos -->
+    <style>
+        /* Estilo para el rectángulo que cubre toda la pantalla */
+        .full-screen-rectangleuno {
+            position: absolute;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6%;
+          
+            background-size: 14%;
+            /* Ajusta el tamaño de la imagen */
+            background-position: right center;
+            /* Alinea la imagen a la derecha */
+            background-repeat: no-repeat;
+            background-color: #d3e4f4;
+         
+            z-index: 9999;
+        }
+        .full-screen-rectangle {
+            position: absolute;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin-top: 5%;
+            height: 5%;
+            background-image: url('imagen/logosssss.jpg');
+            background-size: 14%;
+            /* Ajusta el tamaño de la imagen */
+            background-position: right center;
+            /* Alinea la imagen a la derecha */
+            background-repeat: no-repeat;
+            background-color: #d9a4da;
+            border: 3px solid #c64980;
+            z-index: 9999;
+        }
+
+
+        /* Estilo para el cuadrado con las puntas redondeadas abajo*/
+        .square-with-rounded-bottom {
+            position: absolute;
+            position: fixed;
+            top: -3%;
+            left: 50%;
+            width: 60%;
+            height: 13%;
+            background-color: #ffffff;
+            border: 3px solid #46549e;
+            border-radius: 0 0 50% 50%;
+            transform: translateX(-50%);
+            background-image: url('imagen/medio.jpeg');
+            background-size: 90%;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 9999;
+        }
+
+        /* Estilo para el footer */
+        .footer {
+            position: absolute;
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            margin-top: -15%;
+            width: 100%;
+            height: 7%;
+            background-color: #032f59;
+            border-radius: 10% 10% 0 0;
+            transform: translateX(-50%);
+            background-image: url('imagen/abajobaner.png');
+            background-size: 90%;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 9999;
+        }
+
+        /* Estilo para el menú lateral */
+        .menu {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            /* El menú comienza oculto */
+            width: 250px;
+            height: 100%;
+            background-color: #d7bbe3;
+            /* Color solicitado */
+            transition: 0.3s;
+            z-index: 10000;
+            padding-top: 20px;
+            /* Ajuste para espacio arriba */
+        }
+
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .menu ul li {
+            padding: 16px;
+            text-align: center;
+        }
+
+        .menu ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            /* Tamaño de letra pequeño */
+        }
+
+        .menu ul li a:hover {
+            background-color: #c64980;
+            /* Hover efecto */
+            transition: 0.3s;
+        }
+
+        /* Títulos dentro del menú */
+        .menu .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .menu .header h1,
+        .menu .header h2 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu .header h1 {
+            font-weight: bold;
+            margin-top: 15%;
+            font-size: 130%;
+        }
+
+        .menu .header h2 {
+            font-weight: normal;
+            font-size: 90%;
+        }
+
+        /* Estilo para el botón de cerrar (X) */
+        .menu .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 30px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        /* Mostrar el menú */
+        .menu.open {
+            left: 0;
+            /* El menú se muestra cuando tiene la clase open */
+        }
+
+        /* Botón de hamburguesa */
+        .hamburger {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            position: fixed;
+            margin-top: 2%;
+            font-size: 30px;
+            color: #333;
+            cursor: pointer;
+            z-index: 10001;
+        }
+
+        .hamburger:hover {
+            color: #c64980;
+        }
+
+        /* Ocultar hamburguesa cuando el menú está abierto */
+        .menu.open+.hamburger {
+            display: none;
+        }
+
+        /* Estilo para la imagen en la parte superior derecha */
+        .top-right-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 7%;
+            /* Tamaño de la imagen */
+            height: 4%;
+            /* Tamaño de la imagen */
+            margin-top: 6%;
+            /* Margen superior */
+            margin-right: 5%;
+            /* Margen derecho */
+            z-index: 9999;
+        }
+
+        /* Contenedor principal con flexbox */
+        .image-buttons-container {
+            display: flex;
+            justify-content: space-around;
+            /* Espaciado entre los elementos */
+            align-items: center;
+            /* Centra verticalmente */
+            gap: 20px;
+            /* Espacio entre los elementos */
+            margin-top: 20px;
+            /* Margen superior */
+        }
+
+        /* Estilo para cada imagen redonda */
+        .circle-image {
+            width: 100px;
+            /* Tamaño de la imagen */
+            height: 100px;
+            /* Tamaño de la imagen */
+            border-radius: 50%;
+            /* Hace que la imagen sea redonda */
+            object-fit: cover;
+            /* Asegura que la imagen no se distorsione */
+            margin-bottom: 10px;
+            /* Espacio entre la imagen y el botón */
+        }
+
+        /* Estilo para cada bloque de imagen y botón */
+        .image-button {
+            text-align: center;
+            /* Centra el contenido */
+        }
+
+        /* Estilo para los botones */
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        /* Efecto hover para los botones */
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .back-button img {
+    width: 30px;
+}
+.back-button {
+    background-color: #7ca8d3;
+    border: none;
+    margin-bottom: 5%;
+    cursor: pointer;
+    position: fixed;
+    left: 10px;
+    top: 9%;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.back-button:hover {
+    transform: scale(1.1);
+}
+    </style>
+</head>
+
+<body>
+    <!-- Menú lateral -->
+    <div class="menu" id="menu">
+        <div class="close-btn" id="close-btn">&#10005;</div> <!-- Botón de cierre X -->
+        <div class="header">
+            <h1>UNIFRANZ - DERECHO</h1>
+            <h2>ESTUDIANTES DE DERECHO</h2>
+        </div>
+        <ul>
+            <li><a href="pantallainicio.html"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="normativas.html"><i class="fas fa-book"></i> Normativas</a></li>
+            <li><a href="Nosotros.html"><i class="fas fa-users"></i> Nosotros</a></li>
+        </ul>
+    </div>
+
+    <!-- Botón de hamburguesa -->
+    <div class="hamburger" id="hamburger">
+        &#9776;
+    </div>
+    <!-- <img src="imagen/logosssss.jpg" alt="Imagen" class="top-right-image"> -->
+
+    <!-- Rectángulo completo y cuadrado con las puntas redondeadas abajo -->
+    <div class="full-screen-rectangleuno"></div>
+    <div class="full-screen-rectangle"></div>
+    <div class="square-with-rounded-bottom"></div>
+
+
+    <!-- Footer -->
+    <div class="footer"></div>
+
+    <!-- Incluimos los scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script para abrir y cerrar el menú -->
+    <script>
+        document.getElementById("hamburger").addEventListener("click", function () {
+            document.getElementById("menu").classList.toggle("open");
+        });
+
+        document.getElementById("close-btn").addEventListener("click", function () {
+            document.getElementById("menu").classList.remove("open");
+        });
+    </script>
+
+<button class="back-button">
+    <a href="verificaionExterna.html"> <img src="imagen/atrass.png" alt="Atras"></a>
+ </button>
+
+ <!-- Contenedor Principal -->
+ <div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <!-- Título -->
+            <h2>BENEFICIOS DEL ARREPENTIMIENTO EFICAZ</h2>
+            <!-- Descripción -->
+            <p>Puedes Beneficiarte del arrepentimiento eficaz durante el proceso de fiscalización hasta el Décimo día de la notificación de vista de cargo con la reducción del 100% de sanción cuando pagues la deuda.</p>
+
+            <!-- Sección de reducción de sanciones -->
+            <div class="card">
+                <div class="card-body">
+                    <h4>REDUCCION DE SANCIONES</h4>
+                    <img src="imagen/info2.png" alt="" style=" max-width: 300px;">
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<img src="imagen/abajooooo.png" alt="" style=" max-width: 300px; margin-top: 5%; margin-left: 5%; margin-right: 5%;">
+
+<!-- Scripts de Bootstrap 5 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Script opcional para agregar más interactividad si es necesario
+    function mostrarMensaje() {
+        alert("Gracias por tu interés en el arrepentimiento eficaz.");
+    }
+</script>
+<p style="visibility: hidden;">Este párrafo es invisible pero ocupa espacio en el diseño.</p>
+
+</body>
+
+</html>
