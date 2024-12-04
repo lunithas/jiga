@@ -37,7 +37,7 @@ h2 {
 
 /* Iconos llamativos */
 .step .icon {
-    font-size: 50px;
+    font-size: 20px;
     color: #fff;
     position: absolute;
     top: 20px;
@@ -128,7 +128,7 @@ h2 {
     }
 
     .step .icon {
-        font-size: 23px;
+        font-size: 20px;
         top: 8px;
         right: 8px;
     }
