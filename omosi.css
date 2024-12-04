@@ -1,0 +1,108 @@
+body {
+    background-color: #d2e4f3;
+    margin-top: 25%;
+    font-family: 'Poppins', Arial, sans-serif;
+  }
+  h3 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #2980b9;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .container {
+    margin-top: 30px;
+  }
+  .cuadrado {
+    background-color: #e74c3c;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .cuadrado:hover {
+    transform: scale(1.05);
+  }
+  .encuadrado {
+    background-color: #f39c12;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+  }
+  .img-fluid {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .buttonn {
+    background-color: #2ecc71;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .buttonn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Animación para los párrafos */
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .fadeIn {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  /* Media Queries para dispositivos más pequeños */
+  @media (max-width: 768px) {
+    h3 {
+      font-size: 1.8rem;
+    }
+    .cuadrado {
+      font-size: 1rem;
+    }
+    .encuadrado {
+      font-size: 1.1rem;
+    }
+    .buttonn {
+      padding: 10px 15px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h3 {
+      font-size: 1.5rem;
+    }
+    .cuadrado {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+    .encuadrado {
+      font-size: 1rem;
+      padding: 12px;
+    }
+    .buttonn {
+      font-size: 1rem;
+      padding: 8px 15px;
+    }
+  }

@@ -1,0 +1,156 @@
+/* Estilos generales */
+body {
+    background-color: #d2e4f3;
+    margin-top:20% ;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #34495e;
+    padding: 20px;
+}
+
+.titulo {
+    color: #2c3e50;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.descripcion {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.enLista {
+    background-color: #6dd5fa;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Estilo del texto de plazo */
+.plazo {
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+/* Animación de los logos */
+.logos {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.alineadoderecha {
+    text-align: right;
+    font-weight: bold;
+    color: #2980b9;
+    margin-bottom: 20px;
+}
+
+.inclinadoarribaRojo {
+    font-size: 1.1rem;
+    color: #e74c3c;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo del botón */
+.buttonn {
+    display: block;
+    width: 100%;
+    background: linear-gradient(to right, #2980b9, #6dd5fa);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 30px;
+}
+
+.buttonn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 1.5rem;
+    }
+    .descripcion {
+        font-size: 0.9rem;
+    }
+    .buttonn {
+        font-size: 1rem;
+        padding: 15px;
+    }
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+}
+.recuadroMelon {
+    background-color: #FFB6B9;  /* Color melón */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #34495e;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}

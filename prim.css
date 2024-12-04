@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    margin-top: 15%;
+    background-color: #d2e4f3;
+    font-family: 'Poppins', Arial, sans-serif;
+    padding: 20px;
+}
+
+h3 {
+    color: #2c3e50;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1rem;
+    color: #34495e;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+    font-size: 1rem;
+    color: white;
+    background: linear-gradient(to right, #e74c3c, #e67e22);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-custom:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.recuerda {
+    color: red;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transform: rotate(-5deg);
+    text-align: center;
+    margin-top: 30px;
+    animation: palpitar 1.5s infinite ease-in-out;
+}
+
+@keyframes palpitar {
+    0%, 100% {
+        transform: rotate(-5deg) scale(1);
+    }
+    50% {
+        transform: rotate(-5deg) scale(1.2);
+    }
+}
+
+@media (max-width: 1024px) {
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .btn-custom {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .recuerda {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .btn-custom {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .recuerda {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+    }
+
+    .btn-custom {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .recuerda {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .btn-custom {
+        padding: 6px;
+        font-size: 0.75rem;
+    }
+
+    .recuerda {
+        font-size: 0.9rem;
+    }
+}
