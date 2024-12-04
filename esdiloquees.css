@@ -1,202 +1,6 @@
-   /* Agregar animación de entrada */
-   .fade-in {
+/* Animación de entrada */
+.fade-in {
     animation: fadeIn 1s ease-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #e3f2fd;
-    padding: 30px 0;
-}
-
-/* Contenedor principal */
-.container {
-    max-width: 800px;
-    margin-top: 15%;
-}
-
-/* Estilos del contenedor de imagen y texto */
-.notificacion-title {
-    display: flex;
-    align-items: center;
-    background-color: #e3f2fd;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-/* Imagen */
-.notificacion-title img {
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
-    transition: transform 0.3s ease;
-}
-
-/* Texto */
-.notificacion-title p {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #1e88e5;
-    margin-bottom: 0;
-}
-
-/* Hover para animar la imagen */
-.notificacion-title:hover img {
-    transform: scale(1.1);
-}
-
-/* Efecto hover del contenedor */
-.notificacion-title:hover {
-    background-color: #bbdefb;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsividad para pantallas pequeñas */
-@media (max-width: 576px) {
-    .notificacion-title {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .notificacion-title img {
-        margin-bottom: 15px;
-    }
-}
-
-   /* Agregar animación de entrada */
-   .fade-in {
-    animation: fadeIn 1s ease-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #7ca8d3;
-    padding: 30px 0;
-}
-
-/* Contenedor principal */
-.container {
-    margin-top: 5%;
-    max-width: 800px;
-}
-
-/* Estilos del contenedor de imagen y texto */
-.notificacion-content {
-    display: flex;
-    margin-top: 5%;
-    align-items: center;
-    background-color: #7ca8d3;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-/* Imagen */
-.notificacion-content img {
-    width: 50%;
-   
-    height: 50%;
-    margin-right: 20px;
-    transition: transform 0.3s ease;
-}
-
-/* Texto */
-.notificacion-content p {
-    font-size: 1.2rem;
-    margin-top: 5%;
-    color: #000000;
-    margin-bottom: 0;
-    line-height: 1.5;
-}
-
-/* Efecto hover para animar la imagen */
-.notificacion-content:hover img {
-    transform: scale(1.1);
-}
-
-/* Efecto hover para el contenedor */
-.notificacion-content:hover {
-    background-color: #bbdefb;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsividad para pantallas pequeñas */
-@media (max-width: 576px) {
-    .notificacion-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .notificacion-content img {
-        margin-bottom: 15px;
-    }
-}
-   /* Contenedor de las imágenes */
-   .image-row {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Espaciado entre las imágenes */
-    justify-content: space-between; /* Espacio proporcional entre imágenes */
-    flex-wrap: nowrap; /* Mantiene las imágenes en una fila */
-    padding: 10px;
-    background-color: #7ca8d3; /* Fondo para resaltar el diseño */
-    border-radius: 8px;
-}
-
-/* Estilo para la imagen de la izquierda */
-.image-left {
-    width: 40%; /* Ocupa el 40% del contenedor inicialmente */
-    max-width: 150px; /* Límite para pantallas más grandes */
-    border-radius: 8px; /* Bordes redondeados */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Estilo para la imagen de la derecha */
-.image-right {
-    width: 60%; /* Ocupa el 60% del contenedor inicialmente */
-    max-width: 250px; /* Límite para pantallas más grandes */
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Animaciones al pasar el ratón */
-.image-left:hover, .image-right:hover {
-    transform: scale(1.05); /* Ampliar ligeramente */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Añadir sombra */
-}
-
-/* Animaciones de entrada */
-.image-left, .image-right {
-    animation: fadeIn 1.2s ease-out;
 }
 
 @keyframes fadeIn {
@@ -210,34 +14,131 @@ body {
     }
 }
 
+/* Estilos generales */
+body {
+
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Tarjeta de notificación */
+.notificacion {
+   
+    background: linear-gradient(45deg, #90caf9, #42a5f5);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notificacion:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón animado */
+.animate-button {
+    background-color: #1e88e5;
+    color: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.animate-button:hover {
+    background-color: #1565c0;
+    transform: scale(1.1);
+}
+
+/* Contenedor de las imágenes */
+.image-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    background: linear-gradient(90deg, #bbdefb, #90caf9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.image-left,
+.image-right {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-left:hover,
+.image-right:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
 /* Responsividad */
 @media (max-width: 768px) {
+    .notificacion {
+        flex-direction: column;
+    }
+
     .image-row {
-        gap: 8px; /* Reduce el espacio entre imágenes */
-    }
-
-    .image-left {
-        width: 35%; /* Reduce al 35% para dispositivos más pequeños */
-        max-width: none;
-    }
-
-    .image-right {
-        width: 65%; /* Aumenta al 65% */
-        max-width: none;
+        flex-wrap: wrap;
     }
 }
-
-@media (max-width: 480px) {
-    .image-row {
-        gap: 5px; /* Espacio mínimo */
+ /* Animaciones */
+ .fade-in {
+    animation: fadeIn 1.2s ease-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-
-    .image-left {
-        width: 30%; /* Ocupa menos espacio */
-    }
-
-    .image-right {
-        width: 70%; /* Ocupa más espacio */
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
-       
+.custom-button {
+    background-color: #1e88e5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.custom-button:hover {
+    background-color: #1565c0;
+    transform: scale(1.1);
+}
+.notificacion-content {
+    display: flex;
+    align-items: center;
+    background-color: #e3f2fd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.notificacion-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+.image-row img {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.image-row img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+    .notificacion-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .notificacion-content img {
+        margin-bottom: 15px;
+    }
+}
