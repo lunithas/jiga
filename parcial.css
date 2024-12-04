@@ -42,7 +42,7 @@ h2 {
     position: absolute;
     top: 20px;
     right: 20px;
-    padding: 5px;
+    padding: 3px;
     background: linear-gradient(135deg, #ff9a9e, #fad0c4);
     border-radius: 50%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -108,7 +108,7 @@ h2 {
 
     .step .icon {
         font-size: 23px;
-        top: 5px;
+        top: 15px;
         right: 10px;
     }
 
