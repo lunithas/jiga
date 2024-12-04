@@ -322,54 +322,79 @@
 <button class="back-button">
     <a href="verificaionExterna.html"> <img src="imagen/atrass.png" alt="Atras"></a>
  </button>
- <div class="container fade-in">
-    <div class="notificacion-title">
-        <img src="imagen/campana.png" alt="campana">
-        <p>¿QUÉ ES LA NOTIFICACIÓN?</p>
+  <div class="container text-center mt-5 fade-in">
+    <div class="notificacion-title mb-4">
+        <img src="imagen/campana.png" alt="Campana" width="80" class="me-3">
+        <h2 class="text-primary fw-bold">¿Qué es la notificación?</h2>
     </div>
-</div>
-<div class="container fade-in">
     <div class="notificacion-content">
-        <img src="imagen/info13.png" alt="Información de impuestos">
-        <p>Una notificación de impuestos es un documento oficial que una autoridad tributaria (como el Servicio de Impuestos Internos o Hacienda) envía a un contribuyente para comunicarle un hecho relacionado con sus obligaciones fiscales.</p>
+        <img src="imagen/info13.png" alt="Información de impuestos" class="me-4" style="width: 150px;">
+        <p>Una notificación de impuestos es un documento oficial que una autoridad tributaria envía a un contribuyente para comunicarle un hecho relacionado con sus obligaciones fiscales.</p>
     </div>
+<!-- Carrusel de imágenes -->
+<div id="carouselExampleIndicators" class="carousel slide fade-in" data-bs-ride="carousel">
+    <!-- Indicadores -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+
+    <!-- Contenido del carrusel -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="imagen/info11.png" class="d-block w-100" alt="Primera imagen">
+        </div>
+        <div class="carousel-item">
+            <div class="notificacion-content">
+                <p class="image-right">Los actos y actuaciones de la Administración Tributaria se notificarán por uno de los siguientes medios, según corresponda:</p>
+                <ul style="text-align: start;"><li>Por medios electrónicos   </li>
+                <li>Personalmente    </li>
+                <li>Por Cédula
+                </li>
+                <li>Por Edicto
+                </li>
+            <li>Por correspondencia postal certificada, efectuada mediante correo público o privado o por sistemas de comunicación electrónicos, facsímiles o similares
+            </li>
+            <li>Tácitamente</li>
+            <li>Masiva
+            </li>
+            <li>En Secretaria.</li></ul>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="imagen/buson.png" class="d-block w-100" alt="Tercera imagen">
+        </div>
+        <div class="carousel-item">
+            <div class="notificacion-content">
+                <p class="image-right">La elección del medio de notificación depende del SIN, aunque debido a la tecnología la notificación por el Buzón Tributario es el que usan con mayor frecuencia</p>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+    </button>
+</div>
+<p class="image-right" style="margin-top: 10%;">¿Hay multas asociadas a la orden de fiscalización o verificación? </p>
+
+<div class="text-center mt-5 fade-in">
+    <a href="multas.html" class="btn custom-button">Ver Multas</a>
 </div>
 
-<!-- Incluir los scripts de Bootstrap -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy5b4p7fE4G0v6l5+e6e5i5XksTt2doY5SuqE5c4" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy5b4p7fE4G0v6l5+e6e5i5XksTt2doY5SuqE5c4" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0u7+72tsD1aMXSh6Yf1+f6u8YyWm83YwmAAi/7VfDGh3v7QF" crossorigin="anonymous"></script>
-
-<!-- Contenedor del título centrado -->
-<div style="text-align: center; margin-top: 5%;">
-    <p>Formas de Notificación</p>
-</div>
-
-
-<!-- Incluir los scripts de Bootstrap (si usas componentes como el carousel, dropdown, etc.) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy5b4p7fE4G0v6l5+e6e5i5XksTt2doY5SuqE5c4" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy5b4p7fE4G0v6l5+e6e5i5XksTt2doY5SuqE5c4" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0u7+72tsD1aMXSh6Yf1+f6u8YyWm83YwmAAi/7VfDGh3v7QF" crossorigin="anonymous"></script>
-
-
-<div class="image-row">
-    <img class="image-left" src="imagen/info11.png" alt="Imagen Izquierda">
-    <img class="image-right" src="imagen/info12.png" alt="Imagen Derecha">
-</div>
-
-<div class="image-row">
-    
-    <p class="image-right">La elección del medio de notificación depende del SIN, aunque debido a la tecnología la notificación por el Buzón Tributario es el que usan con mayor frecuencia</p>
-    <img class="image-left" src="imagen/buson.png" alt="Imagen Izquierda">
-
-</div>
-<div style="text-align: center; margin-top: 5%;">
-    <p>¿Hay multas asociadas a la orden de fiscalización o verificación? </p>
-</div>
-
-<div style="text-align: center; margin-top: 5%; background-color: #d9a4da; border-radius: 10% 10% 10% 15%;margin-left: 20%; margin-right: 20%;">
-    <a href="multas.html">multas</a>
-</div>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<p style="visibility: hidden;">Este párrafo es invisible pero ocupa espacio en el diseño.</p>
 <p style="visibility: hidden;">Este párrafo es invisible pero ocupa espacio en el diseño.</p>
 
 </body>
