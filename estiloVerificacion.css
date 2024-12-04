@@ -68,7 +68,7 @@ body, html {
 /* Estilos para la imagen de error */
 .error-imagen {
     position: absolute; /* Cambia a posición absoluta */
-    bottom: 10px; /* Coloca la imagen a 10px del fondo */
+    bottom: -2px; /* Coloca la imagen a 10px del fondo */
     right: 10px; /* Coloca la imagen a 10px de la derecha */
     width: 50px; /* Tamaño de la imagen */
     height: 50px; /* Tamaño de la imagen */
